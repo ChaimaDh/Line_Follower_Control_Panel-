@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JA3 Control</title>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>JA3</h1>
+        <p>ROBOT CONTROL PANEL</p>
+    </header>
+
+    <main>
+
+        <section class="connection">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="connectionStatus">Not Connected</span>
+        </section>
+
+        <section class="robot-status">
+            <h2>Robot Status</h2>
+            <p id="robotStatus">STANDBY</p>
+        </section>
+
+        <section class="controls">
+            <h2>Controls</h2>
+
+            <button id="startBtn">START</button>
+            <button id="stopBtn">STOP</button>
+            <button id="calibrateBtn">CALIBRATE</button>
+        </section>
+
+        <section class="settings">
+            <h2>PID SETTINGS</h2>
+
+            <div class="setting-item">
+                <label for="kp">Kp</label>
+                <input type="number" id="kp" value="30" step="0.01">
+            </div>
+
+            <div class="setting-item">
+                <label for="ki">Ki</label>
+                <input type="number" id="ki" value="0" step="0.001">
+            </div>
+
+            <div class="setting-item">
+                <label for="kd">Kd</label>
+                <input type="number" id="kd" value="20" step="0.01">
+            </div>
+        </section>
+
+        <section class="settings">
+            <h2>SPEED SETTINGS</h2>
+
+            <div class="setting-item">
+                <label for="baseSpeed">Base Speed</label>
+                <input type="range" id="baseSpeed" min="0" max="255" value="120">
+                <span id="baseSpeedValue">120</span>
+            </div>
+
+            <div class="setting-item">
+                <label for="maxSpeed">Max Speed</label>
+                <input type="range" id="maxSpeed" min="0" max="255" value="200">
+                <span id="maxSpeedValue">200</span>
+            </div>
+
+            <div class="setting-item">
+                <label for="turnSpeed">Turn Speed</label>
+                <input type="range" id="turnSpeed" min="0" max="255" value="100">
+                <span id="turnSpeedValue">100</span>
+            </div>
+
+        </section>
+        <section class="apply-section">
+            <button id="applyBtn">APPLY SETTINGS</button>
+            <p id="applyMessage"></p>
+        </section>
+    </main>
+
+</body>
+
+</html>

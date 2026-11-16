@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: #f5f5f5;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #8b2635;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+}
+
+
+section {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+section h2 {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 18px;
+}
+
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #8b2635;
+    border-radius: 50%;
+}
+
+
+.robot-status {
+    text-align: center;
+}
+
+.robot-status p {
+    color: #a52a3a;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.controls h2 {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #681827;
+    color: white;
+    border: 1px solid white;
+
+}
+
+button:hover {
+    filter: brightness(1.25);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+
+.setting-item {
+    display: grid;
+    grid-template-columns: 90px 1fr 35px;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.setting-item label {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.setting-item span {
+    color: #a52a3a;
+    font-weight: bold;
+    text-align: right;
+}
+
+.setting-item input[type="range"] {
+    width: 100%;
+    accent-color: #8b2635;
+    cursor: pointer;
+}
+
+.setting-item input[type="number"] {
+    width: 100%;
+    background: #101010;
+    color: white;
+    border: 1px solid #5a2630;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.setting-item input[type="number"]:focus {
+    border-color: #a52a3a;
+}
+
+
+#applyBtn {
+    width: 100%;
+    background: #681827;
+    color: white;
+    padding: 15px;
+    border: 1px solid #8b2635;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#applyMessage {
+    text-align: center;
+    color: #aaa;
+    margin-top: 12px;
+    font-size: 13px;
+}
